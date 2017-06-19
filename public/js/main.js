@@ -4,24 +4,23 @@
 
     require.config({
         paths: {
-            // 'jquery': '../lib/vendor/jquery-1.11.2.min',
-            // 'bootstrap': '../lib/vendor/bootstrap-3.3.6-dist/js/bootstrap.min'
+            'jquery': '../../lib/jquery-3.2.1/jquery.min',
+            'bootstrap': '../../lib/bootstrap-3.3.7/js/bootstrap.min'
         },
         shim: {
-            // 'bootstrap': {
-            //     deps: ['jquery']
-            // }
+            'bootstrap': {
+                deps: ['jquery']
+            }
         }
     });
 
     require([
-        'app'
-        // 'app',
-        // 'jquery',
-        // 'bootstrap'
-        ],
-        function(App, $) {
-            App.initialize();
+        'app',
+        'jquery',
+        'bootstrap'
+    ],
+    function(App, $) {
+        App.initialize();
     });
 
 }());
